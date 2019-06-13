@@ -1,0 +1,53 @@
+body {
+  background-color: gainsboro;
+}
+
+h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: darkmagenta;
+}
+
+#gameboard {
+  perspective: 1400px;
+}
+
+.row-container {
+  text-align: center;
+}
+
+.tile {
+  display: inline-block;
+  margin: 2px;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.tile-face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.tile-face-front {
+  background: darkslategrey;
+}
+
+.tile-face-back {
+  transform: rotateY(180deg);
+}
+
+.tile.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.tile:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px grey;
+}
